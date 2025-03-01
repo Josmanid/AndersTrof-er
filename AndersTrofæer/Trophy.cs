@@ -1,4 +1,6 @@
-﻿namespace AndersTrofæer
+﻿using System.Xml.Linq;
+
+namespace AndersTrofæer
 {
     public class Trophy
     {
@@ -39,9 +41,9 @@
 
         }
         //Paramatiserede constructor så vi kan fylde lidt på
-        public Trophy(int id, string competition, int year)
+        public Trophy(string competition, int year)
         {
-            Id = id;
+            
             Competition = competition;
             Year = year;
         }
@@ -52,7 +54,7 @@
             Competition = "Unknown";
             Year = 1985;
         }
-
+      
         public override string ToString() {
             return $"{Id} Anders har vundet {Competition} i år: {Year}";
         }

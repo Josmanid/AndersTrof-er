@@ -40,21 +40,10 @@ namespace AndersTrofæer.Tests
         public void TrophyPropYearShouldWorkTest(int validYear) {
 
             //Act
-            Trophy trophyvalid = new Trophy(1, "Unknown", validYear);
-         
+            Trophy trophyvalid = new Trophy("Unknown", validYear);
+
             //Assert
             Assert.AreEqual(validYear, trophyvalid.Year);
-           
-
-            ////Should not work
-            //Assert.ThrowsException<ArgumentOutOfRangeException>(
-            //    () => trophy.Year = 1960);
-            //Assert.ThrowsException<ArgumentOutOfRangeException>(
-            //    () => trophy.Year = 2030);
-            //Assert.ThrowsException<ArgumentOutOfRangeException>(
-            //() => trophy.Year = 1970);
-            //Assert.ThrowsException<ArgumentOutOfRangeException>(
-            //    () => trophy.Year = 2025);
 
 
 
@@ -67,7 +56,7 @@ namespace AndersTrofæer.Tests
         public void TrophyPropYearShouldNotWorkTest(int inValidYear) {
 
             //Assert
-            Assert.ThrowsException<ArgumentOutOfRangeException>(() => new Trophy(1, "Unknown", inValidYear));
+            Assert.ThrowsException<ArgumentOutOfRangeException>(() => new Trophy( "Unknown", inValidYear));
 
 
         }
@@ -77,7 +66,7 @@ namespace AndersTrofæer.Tests
             //Act
             string result = trophy.ToString();
             //Assert
-            Assert.AreEqual(result,$"0 Anders har vundet Unknown i år: 1985");
+            Assert.AreEqual(result, $"0 Anders har vundet Unknown i år: 1985");
         }
     }
 }
