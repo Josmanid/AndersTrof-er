@@ -15,6 +15,7 @@ namespace AndersTrofæer
 
 
         public IEnumerable<Trophy> Get(string? competition = null, int? yearBefore = null) {
+            //Her Returneres en kopi af listen af alle Trophy objekter
             IEnumerable<Trophy> result = new List<Trophy>(trophies);
             //Filter efter år
             if (yearBefore != null)

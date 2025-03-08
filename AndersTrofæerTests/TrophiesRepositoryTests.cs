@@ -85,7 +85,7 @@ namespace AndersTrofæer.Tests
             //act
             IEnumerable<Trophy> SortTrophyAsc = _trophy.Get(competition:"b");
 
-            //Assert
+            //Assert Ændrer rækkefølgen sig?
             Assert.AreEqual("Bowling", SortTrophyAsc.ElementAt(0).Competition);
             Assert.AreEqual("Cykling", SortTrophyAsc.ElementAt(1).Competition);
             Assert.AreEqual("FaldskærmUdspring", SortTrophyAsc.ElementAt(2).Competition);
