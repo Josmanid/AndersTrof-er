@@ -14,7 +14,7 @@ namespace AndersTrofæer.Tests
         [TestInitialize]
 
         public void Init() {
-            //Arrange the default constructor
+            //Arrange 
             trophy = new Trophy();
 
         }
